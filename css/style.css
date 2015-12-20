@@ -3,13 +3,20 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html, body {
+  width: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
 body
 {
     overflow:hidden;
     font-family: 'Open Sans', sans-serif;
+    background-image: url('../img/bg.jpg');
     background-size: cover;
 }
 .topbar {
+    display: none;
     z-index: 1;
     background-color: #000;
     width:100%;
@@ -19,14 +26,67 @@ body
     top: 0px;
     margin: auto;
     left: 0px;
-    height: 50px;
+    height: 10%;
     font-size: 1.5em;
     cursor: pointer;
     border-collapse: collapse;
-    opacity: 0.7;
+    opacity: 0.8;
     box-shadow: 0px -0px 100px #000;
 }
 .navitem{
-    width: 20%;
+    width: 16%;
     border:0px solid white;
+}
+.navarrow{
+    display: none;
+   width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid rgba(0,0,0,0.6);
+    position: fixed;
+    top:10%;
+    left:0px;
+}
+#content {
+    display: none;
+}
+.b1, .b2, .b4 {
+    width: 7%;
+    position: absolute;
+}
+.b1 {
+    top: -5;
+    left:15%;
+}
+.b2 {
+    top: -5;
+    left:60%;
+}
+.b3 {
+    position: absolute;
+    width:60%;
+    top: -5;
+    left:20%;
+}
+.b4 {
+    top: -5;
+    left:80%;
+}
+.head {
+    font-family: 'Rough Draft';
+    font-size: 4.5em;
+    color: #FFF;
+}
+.p1 {
+    width: auto;
+    position: relative;
+    top:4.5em;
+    left:7%;
+}
+.p2 {
+    width: auto;
+    position: relative;
+    top: 2.7em;
+    left:50%;
 }
