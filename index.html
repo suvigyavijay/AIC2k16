@@ -133,7 +133,7 @@
 <!-- JAVASCRIPT -->
 <script src="js\jquery.js"></script>
 <script type="text/javascript">
-console.log(window.innerWidth);
+// console.log(window.innerWidth);
 // 	function show() {
 // 		document.getElementById("topbar").style.visibility = "visible";
 // 		document.getElementById("navarrow").style.visibility = "visible";
@@ -166,7 +166,7 @@ function showIt() {$(function() {
 		var cpg = tag.getAttribute("data-page");
 		// location.href= "#page2"
 		var cpg = parseInt(cpg);
-		console.log(cpg);
+		// console.log(cpg);
 		switch (cpg) {
 		case 1:
 		$("#navarrow").animate({left: '7%'},500)
@@ -194,7 +194,7 @@ function showIt() {$(function() {
 		break;
 	};
 	};
-	console.log(cpg);
+	// console.log(cpg);
 	switch (cpg) {
 		case 1:
 		$("#navarrow").animate({left: '7%'},500)
@@ -218,7 +218,7 @@ if(window.innerWidth < 800) {
 		}});
 
 	function changeClass(div) {
-		console.log($(".active"));
+		// console.log($(".active"));
 		$(".active").removeClass("active");				
 		var className=div.getAttribute("class");
 		div.className="active";
