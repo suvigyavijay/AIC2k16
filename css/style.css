@@ -67,8 +67,8 @@ body
     a, a:hover, a:visited {
         color: #202024;
     }
-    .app-nav li a:hover, .app-nav li.active a {
-        background-color: #FFF;
+    .app-nav li.active a, .active {
+        background-color: #FFF !important;
         padding: 0;
     }
     .app-nav li a span {

@@ -24,32 +24,32 @@
 	<nav class="app-nav">
 	<ul>
 	<li onclick="changeClass(this)">
-	<a href="#page1">
+	<a href="#page1" onclick="changeClass(this)">
 			<span>Home</span>
 	</a>
 	</li>
 	<li onclick="changeClass(this)">
-	<a href="#page2">
+	<a href="#page2" onclick="changeClass(this)">
 			<span>About</span>
 	</a>
 	</li>
 	<li onclick="changeClass(this)">
-	<a href="#page3">
+	<a href="#page3" onclick="changeClass(this)">
 			<span>Competition</span>
 	</a>
 	</li>
 	<li onclick="changeClass(this)">
-	<a href="#page4">
+	<a href="#page4" onclick="changeClass(this)">
 			<span>AIC 2015</span>
 	</a>
 	</li>
 	<li onclick="changeClass(this)">
-	<a href="#page5">
+	<a href="#page5" onclick="changeClass(this)">
 			<span>Sponsor</span>
 	</a>
 	</li>
 	<li onclick="changeClass(this)">
-	<a href="#page6">
+	<a href="#page6" onclick="changeClass(this)">
 			<span>Contact</span>
 	</a>
 	</li>
@@ -157,7 +157,6 @@ function showIt() {$(function() {
   $("#navarrow").fadeIn(1500);
   $("#content").fadeIn(1500);
 })};
-
 </script>
 <!-- PAGE LINKING -->
 <script type="text/javascript">
@@ -200,8 +199,6 @@ function showIt() {$(function() {
 		$("#navarrow").animate({left: '7%'},500)
 		break;
 	};
-
-
 </script>
 <!-- FOR MOBILE NAV -->
 <script type="text/javascript">
@@ -212,19 +209,17 @@ if(window.innerWidth < 800) {
 		// console.log(visi);
 		if (visi===false) { 
 		$('.app-nav').fadeIn();
-		visi=true
+		visi=true;
 		setTimeout(function() {$('.app-nav').fadeOut();
-		visi=false},2000);
+		visi=false;
+		$(".active").removeClass("active");	},2000);
 		}});
-
 	function changeClass(div) {
 		// console.log($(".active"));
 		$(".active").removeClass("active");				
 		var className=div.getAttribute("class");
 		div.className="active";
-		setTimeout(function() {div.className="active";},1000);
 	}
-
 }
 </script>
 <!-- SMOOTH SCROLL -->
