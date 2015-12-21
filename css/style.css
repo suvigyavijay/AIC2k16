@@ -102,11 +102,6 @@ body
     top: -5;
     left:80%;
 }
-.head {
-    font-family: 'Rough Draft';
-    font-size: 4.5em;
-    color: #FFF;
-}
 .page {
     position: static;
     z-index: -1;
@@ -160,4 +155,32 @@ a:active {
 }
 a:hover {
     text-decoration: none;
+}
+.head {
+    color: #000;
+    font-size: 3em;
+    text-align: center;
+    position: relative;
+    top: 15%;
+    font-weight: bold;
+}
+.info {
+    color: #000;
+    font-size: 1.5em;
+    text-align: justify;
+    position: relative;
+    top: 20%;
+    max-width: 80%;
+    margin-left: 10%;
+}
+#spon {
+    float: right;    
+    margin: 40px 15px 10px 40px; 
+    width:30%;
+}
+#page6 caption {
+    text-align: left;
+    font-weight: bold;
+    font-size: 2em;
+    width: 400px;
 }
