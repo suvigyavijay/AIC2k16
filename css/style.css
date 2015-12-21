@@ -4,9 +4,9 @@
 }
 
 html, body {
-  width: auto !important;
-  overflow-x: hidden !important;
-  overflow-y: hidden !important;
+  width: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
   padding: 0;
   margin: 0;
 }
@@ -16,11 +16,14 @@ body
     font-family: 'Open Sans', sans-serif;
   }
 @media (max-width: 800px) {
+    html, body {
+        overflow-y:scroll;
+    }
    .topbar{
     display: none !important;
    }
    .navarrow{
-    visibility: none;
+    display: none !important;
    }
    .b3 {
     position: absolute !important;
@@ -28,8 +31,62 @@ body
     top: 100% !important;
     left:10% !important;
     }
+    .app-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 15px;
+        bottom: 0;
+        height: 100%;
+        z-index: 10;
+    }
+    .app-nav ul {
+    position: relative;
+    top:30%;
+    }
+    nav ol, nav ul {
+        list-style: none;
+        list-style-image: none;
+    }
+    .app-nav li {
+        display: block;
+        margin-bottom: 16px;
+    }
+    .app-nav li a {
+        display: block;
+        height: 8px;
+        width: 8px;
+        border: 3px solid #202024;
+        background: #202024;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        margin: 0;
+        position: relative;
+    }
+    a, a:hover, a:visited {
+        color: #202024;
+    }
+    .app-nav li a:hover, .app-nav li.active a {
+        background-color: #FFF;
+        padding: 0;
+    }
+    .app-nav li a span {
+        display: ;
+        position: absolute;
+        color: #FFF;
+        background-color: #202024;
+        font-weight: 400;
+        text-align: right;
+        top: -10px;
+        width: ;
+        padding: 5px;
+        right: 21px;
+    }
 
-
+}
+.app-nav{
+    display: none;
 }
 .topbar {
     display: none;

@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css\style.css">
     <link rel="icon" href="img\favicon.ico" type="image/ico">
     <meta name="viewport" content="width=device-width" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <!-- NAVIGATION -->
@@ -19,6 +20,41 @@
             </tr>
         </table>
 	<div id="navarrow" class="navarrow" ></div>
+<!-- MOBILE NAV -->
+	<nav class="app-nav">
+	<ul>
+	<li onclick="changeClass(this)">
+	<a href="#page1">
+			<span>Home</span>
+	</a>
+	</li>
+	<li onclick="changeClass(this)">
+	<a href="#page2">
+			<span>About</span>
+	</a>
+	</li>
+	<li onclick="changeClass(this)">
+	<a href="#page3">
+			<span>Competition</span>
+	</a>
+	</li>
+	<li onclick="changeClass(this)">
+	<a href="#page4">
+			<span>AIC 2015</span>
+	</a>
+	</li>
+	<li onclick="changeClass(this)">
+	<a href="#page5">
+			<span>Sponsor</span>
+	</a>
+	</li>
+	<li onclick="changeClass(this)">
+	<a href="#page6">
+			<span>Contact</span>
+	</a>
+	</li>
+	</ul>
+	</nav>
 <!-- LANDING -->
 <div id="page1" class="page p1">
 	<div class="bulb" id="bulb">
@@ -69,7 +105,7 @@
  	</div> 
  	<div id="page5" class="page p5">
  			<div class="head">Sponsor</div>
- 			<div class="info">
+ 			<div class="info" style="font-size:1.2em  !important">
  				We are proud to have Schneider Electric as the event sponsor for Apogee Innovation Challenge 2016. Schneider Electric is a European multinational corporation that specializes in electricity distribution, automation management and produces installation components for energy management. It is headquartered in Rueil-Malmaison, France.<img src="img\sponslogo.png" id="spon">
  				<br>
 				As the global specialist in energy management and automation, Schneider Electric serves customers in over 100 countries, helping them to make their lives and ecosystems safe, reliable, efficient and sustainable. From the simplest of switches to complex operational systems, their technology, software and services improve the way their customers manage and automate their operations. At Schneider Electric, they call this Life is On.
@@ -91,12 +127,6 @@
                 </table>
  			</div>
  	</div> 
- 	<div id="page7" class="page p7">
- 			
- 	</div> 
-	<div id="page8" class="page p8">
- 			
- 	</div> 
  	
 
 </div>
@@ -104,13 +134,13 @@
 <script src="js\jquery.js"></script>
 <script type="text/javascript">
 console.log(window.innerWidth);
-console.log($(this))
 // 	function show() {
 // 		document.getElementById("topbar").style.visibility = "visible";
 // 		document.getElementById("navarrow").style.visibility = "visible";
 // 		document.getElementById("content").style.visibility = "visible";
 // 	}
 $(document).ready(function() {
+	location.href="#page1";
 	if(window.innerWidth > 800){    
 		$("#bf").hide();
 		$("#be").hide();
@@ -173,7 +203,30 @@ function showIt() {$(function() {
 
 
 </script>
+<!-- FOR MOBILE NAV -->
+<script type="text/javascript">
+if(window.innerWidth < 800) { 
+	$('.app-nav').hide();
+	var visi=false;
+	$(window).scroll(function() {
+		// console.log(visi);
+		if (visi===false) { 
+		$('.app-nav').fadeIn();
+		visi=true
+		setTimeout(function() {$('.app-nav').fadeOut();
+		visi=false},2000);
+		}});
 
+	function changeClass(div) {
+		console.log($(".active"));
+		$(".active").removeClass("active");				
+		var className=div.getAttribute("class");
+		div.className="active";
+		setTimeout(function() {div.className="active";},1000);
+	}
+
+}
+</script>
 <!-- SMOOTH SCROLL -->
 <script type="text/javascript">
  $(function() {
