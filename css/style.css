@@ -14,16 +14,21 @@ body
 {
     overflow:hidden;
     font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
   }
 @media (max-width: 800px) {
-    html, body {
+    html {
         overflow-y:scroll;
+        font-size: 10px;
     }
    .topbar{
     display: none !important;
    }
    .navarrow{
     display: none !important;
+   }
+   .b1, .b2, .b4, .b3a {
+        display: none !important;
    }
    .b3 {
     position: absolute !important;

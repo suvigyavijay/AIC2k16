@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css\style.css">
     <link rel="icon" href="img\favicon.ico" type="image/ico">
     <meta name="viewport" content="width=device-width" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <!-- NAVIGATION -->
@@ -105,7 +105,7 @@
  	</div> 
  	<div id="page5" class="page p5">
  			<div class="head">Sponsor</div>
- 			<div class="info" style="font-size:1.2em  !important">
+ 			<div class="info" >
  				We are proud to have Schneider Electric as the event sponsor for Apogee Innovation Challenge 2016. Schneider Electric is a European multinational corporation that specializes in electricity distribution, automation management and produces installation components for energy management. It is headquartered in Rueil-Malmaison, France.<img src="img\sponslogo.png" id="spon">
  				<br>
 				As the global specialist in energy management and automation, Schneider Electric serves customers in over 100 countries, helping them to make their lives and ecosystems safe, reliable, efficient and sustainable. From the simplest of switches to complex operational systems, their technology, software and services improve the way their customers manage and automate their operations. At Schneider Electric, they call this Life is On.
@@ -116,7 +116,7 @@
  			<div class="head">Contact Us</div>
  			<div class="info">
  				<table>
- 				<caption>Geeta Bansal<br>APOGEE Co-ordinator</caption>
+ 				<caption>Geeta Bansal<br><span style="font-size:0.7em">APOGEE Co-ordinator<span></caption>
                     <tr>
                         <td><img src="img\mail.png" style="height:20px;"></td>
                         <td>geetabansal456@gmail.com</td>
@@ -157,6 +157,37 @@ function showIt() {$(function() {
   $("#navarrow").fadeIn(1500);
   $("#content").fadeIn(1500);
 })};
+
+// When Document is resized
+
+$(window).resize(function() {
+	if(window.innerWidth > 800){    
+		$("#bf").hide();
+		$("#be").hide();
+   	setTimeout(function() {$("#bf").fadeIn(1000);},4500);
+   	$("#b1").animate({top: '100%', width:'7%'},1000);
+   	setTimeout(function() {$("#b4").animate({top: '100%', width:'7%'},1000);},1000);
+   	setTimeout(function() {$("#b3").animate({top: '100%', width:'60%'},1000);},1500);
+   	setTimeout(function() {$("#b2").animate({top: '100%', width:'7%'},1000);},2000);
+   	setTimeout(function() {$("#be").fadeIn(1000)},3000);
+   	showIt();
+	}
+	if(window.innerWidth < 800) { 
+	$('.app-nav').hide();
+	var visi=false;
+	$(window).scroll(function() {
+		// console.log(visi);
+		if (visi===false) { 
+		$('.app-nav').fadeIn();
+		visi=true;
+		setTimeout(function() {$('.app-nav').fadeOut();
+		visi=false;
+		$(".active").removeClass("active");	},2000);
+		}});
+	}
+
+});
+
 </script>
 <!-- PAGE LINKING -->
 <script type="text/javascript">
