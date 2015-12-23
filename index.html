@@ -147,7 +147,7 @@
 // 		document.getElementById("content").style.visibility = "visible";
 // 	}
 $(document).ready(function() {
-	location.href="#page1";
+	location.href= location.href + '#page1';
 	if(window.innerWidth > 800){    
 		$("#bf").hide();
 		$("#be").hide();
@@ -277,9 +277,10 @@ if(window.innerWidth < 800) {
     }
   });
 });
- $('td').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
+ $('td').on('click',function(){
+ 	 console.log( $.attr(this, 'href'), $($.attr(this, 'href')).position().top );
+    $('body').animate({
+        scrollTop : ($( $.attr(this, 'href') ).offset().top) - ($('#page1').offset().top)
     }, 500);
     return false;
 });
