@@ -20,6 +20,7 @@ body
     html {
         overflow-y:scroll;
         font-size: 10px;
+        overflow: visible;
     }
     body {
           font-size: 10px;
