@@ -19,6 +19,8 @@ body
 @media (max-width: 800px) {
     html {
         overflow-y:scroll;
+    }
+    body {
         font-size: 10px;
     }
    .topbar{
