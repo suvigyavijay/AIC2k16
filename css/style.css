@@ -187,7 +187,8 @@ body
     width: 100%;
     height: 100%;
     color: transparent;
-    position: relative; 
+    position: relative;
+    /* overflow-y:auto;  */
 }
 .p1 {
     background-image: url('../img/bg.jpg');
@@ -354,7 +355,6 @@ div.qbox {
     color:#000;
     position: relative;
     top:13%;
-    margin-top: 10px;
 }
 .college {
     font-family: Georgia;
